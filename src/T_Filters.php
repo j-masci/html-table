@@ -65,7 +65,19 @@ Trait T_Filters
             // todo: possibly modify a numerically indexed array? might not be able to do so without breaking other things.
             return $cols;
         } else if( $cols === null ) {
-            return isset( $rows[ 0 ] ) && is_array( $rows[ 0 ] ) ? array_keys( @$rows[ 0 ] ) : [];
+
+            if( isset( $rows[0] ) && is_array( $rows[0] ) ) {
+
+                $_cols = [];
+                foreach ( $rows[0] as $key => $value ) {
+                    $_cols[$key] = $key;
+                }
+
+                return $_cols;
+            } else {
+                return [];
+            }
+
         } else {
             return [];
         }
