@@ -68,9 +68,11 @@ Class Table{
      * Render the template, passing $this to it. This assumes
      * that the top level template component accepts $this
      * as the first parameter.
+     *
+     * @return mixed
      */
     public function render(){
         // invokes the 'table' component, passing in $this
-        $this->template->render( $this );
+        return $this->template->render( $this );
     }
 }
