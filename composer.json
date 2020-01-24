@@ -1,7 +1,6 @@
 {
     "name": "jmasci/html-table",
     "description": "flexible HTML table rendering class using git://j-masci/component-template",
-    "license": "GPLv2",
     "authors": [
         {
             "name": "Joel Masci",
