@@ -1,0 +1,19 @@
+{
+    "name": "jmasci/html-table",
+    "description": "flexible HTML table rendering class using git://j-masci/component-template",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Joel Masci",
+            "email": "masci.joel@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "JMasci\\HtmlTable\\": "src/"
+        }
+    },
+    "require": {
+        "jmasci/component-template": "dev-master"
+    }
+}
