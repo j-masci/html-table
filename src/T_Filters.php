@@ -66,14 +66,25 @@ Trait T_Filters
             return $cols;
         } else if( $cols === null ) {
 
-            if( isset( $rows[0] ) && is_array( $rows[0] ) ) {
+            $first_row = null;
+
+            // get FIRST element, not necesarily $rows[0]
+            if ( $rows && is_array ( $rows ) ) {
+                foreach ( $rows as $_row ) {
+                    $first_row = $_row;
+                    break;
+                }
+            }
+
+            if ( $first_row && is_array( $first_row ) ) {
 
                 $_cols = [];
-                foreach ( $rows[0] as $key => $value ) {
+                foreach ( $first_row as $key => $value ) {
                     $_cols[$key] = $key;
                 }
 
                 return $_cols;
+
             } else {
                 return [];
             }
